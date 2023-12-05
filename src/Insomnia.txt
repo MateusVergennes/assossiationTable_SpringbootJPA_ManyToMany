@@ -1,0 +1,41 @@
+{
+    "name": "santosh",
+    "age": 33,
+    "dept": "UI",
+    "courses": [
+        {
+            "title": "Angular",
+            "abbreviation": "ng",
+            "modules": 12,
+            "fee": 5000
+        },
+        {
+            "title": "React JS",
+            "abbreviation": "RJS",
+            "modules": 11,
+            "fee": 1600
+        }
+    ]
+}
+
+
+{
+    "name": "bow",
+    "age": 30,
+    "dept": "DEV",
+    "courses": [
+        {
+            "title": "Spring Boot",
+            "abbreviation": "sb",
+            "modules": 25,
+            "fee": 2500
+        },
+        {
+            "title": "Database Systems",
+            "abbreviation": "dbj",
+            "modules": 9,
+            "fee": 1200
+        }
+    ]
+}
+
