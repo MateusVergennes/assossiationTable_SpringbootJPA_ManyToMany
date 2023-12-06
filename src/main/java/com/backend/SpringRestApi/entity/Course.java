@@ -1,6 +1,8 @@
 package com.backend.SpringRestApi.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,6 +17,7 @@ import java.util.Set;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Course {
 
     @Id
@@ -26,6 +29,6 @@ public class Course {
     private double fee;
 
     @ManyToMany(mappedBy = "courses", fetch = FetchType.LAZY)
-    @JsonBackReference //to bynd json to doc
+    //@JsonBackReference //to bynd json to doc
     private Set<Student> students;
 }

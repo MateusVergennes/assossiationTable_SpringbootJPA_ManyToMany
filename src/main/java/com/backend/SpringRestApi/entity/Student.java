@@ -1,6 +1,8 @@
 package com.backend.SpringRestApi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +16,7 @@ import java.util.Set;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Student {
 
     @Id
@@ -32,7 +35,7 @@ public class Student {
                     @JoinColumn(name = "course_id", referencedColumnName = "id")
             }
     )
-    @JsonManagedReference
+    //@JsonManagedReference
     private Set<Course> courses;
 
 }
